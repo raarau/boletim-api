@@ -1,0 +1,16 @@
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/repository/BoletimRepository.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/BoletimApiApplication.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/domain/Unidade.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/controllers/UnidadeController.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/presenters/BoletimPresenter.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/repository/DisciplinaRepository.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/controllers/AlunoController.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/domain/Boletim.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/domain/Disciplina.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/repository/UnidadeRepository.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/repository/AlunoRepository.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/seguranca/cliente/ConfiguracaoAutorizacaoCliente.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/seguranca/servidor/AuthorizationServerConfig.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/controllers/DisciplinaController.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/domain/Aluno.java
+/Users/Rodrigo/Desktop/Boletim-master/src/main/java/br/com/bandtec/boletim/controllers/BoletimController.java

@@ -6,7 +6,7 @@
 package br.com.bandtec.boletim.controllers;
 
 import br.com.bandtec.boletim.repository.DisciplinaRepository;
-import com.bandtec.boletimapi.domain.Disciplina;
+import br.com.bandtec.boletim.domain.Disciplina;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

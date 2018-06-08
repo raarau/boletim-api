@@ -1,0 +1,15 @@
+br/com/bandtec/boletim/repository/BoletimRepository.class
+br/com/bandtec/boletim/seguranca/servidor/AuthorizationServerConfig.class
+br/com/bandtec/boletim/controllers/BoletimController.class
+br/com/bandtec/boletim/domain/Aluno.class
+br/com/bandtec/boletim/repository/DisciplinaRepository.class
+br/com/bandtec/boletim/seguranca/cliente/ConfiguracaoAutorizacaoCliente.class
+br/com/bandtec/boletim/BoletimApiApplication.class
+br/com/bandtec/boletim/controllers/DisciplinaController.class
+br/com/bandtec/boletim/controllers/UnidadeController.class
+br/com/bandtec/boletim/domain/Unidade.class
+br/com/bandtec/boletim/repository/AlunoRepository.class
+br/com/bandtec/boletim/repository/UnidadeRepository.class
+br/com/bandtec/boletim/domain/Boletim.class
+br/com/bandtec/boletim/domain/Disciplina.class
+br/com/bandtec/boletim/controllers/AlunoController.class

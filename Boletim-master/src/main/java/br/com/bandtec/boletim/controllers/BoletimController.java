@@ -6,8 +6,7 @@
 package br.com.bandtec.boletim.controllers;
 
 import br.com.bandtec.boletim.repository.BoletimRepository;
-import com.bandtec.boletimapi.domain.Aluno;
-import com.bandtec.boletimapi.domain.Boletim;
+import br.com.bandtec.boletim.domain.Boletim;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

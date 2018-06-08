@@ -1,7 +1,7 @@
 package br.com.bandtec.presenters;
 
 import br.com.bandtec.boletim.controllers.BoletimController;
-import com.bandtec.boletimapi.domain.Boletim;
+import br.com.bandtec.boletim.domain.Boletim;
 
 public class BoletimPresenter {
 

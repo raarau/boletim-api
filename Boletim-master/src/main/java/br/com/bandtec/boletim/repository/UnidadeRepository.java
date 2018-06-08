@@ -5,7 +5,7 @@
  */
 package br.com.bandtec.boletim.repository;
 
-import com.bandtec.boletimapi.domain.Unidade;
+import br.com.bandtec.boletim.domain.Unidade;
 import org.springframework.data.repository.CrudRepository;
 
 /**
