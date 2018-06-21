@@ -5,6 +5,7 @@
  */
 package br.com.bandtec.boletim.domain;
 
+import java.text.DecimalFormat;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,7 +24,8 @@ public class Unidade {
     private String nome;
     private String endereco;
     private Double media;
-    private Double frenquencia;
+    private int frenquencia;
+     
 
     public int getId() {
         return id;
@@ -50,6 +52,8 @@ public class Unidade {
     }
 
     public Double getMedia() {
+        DecimalFormat arredondar = new DecimalFormat();
+        arredondar.setMinimumFractionDigits(3);
         return media;
     }
 
@@ -57,11 +61,11 @@ public class Unidade {
         this.media = media;
     }
 
-    public Double getFrenquencia() {
+    public int getFrenquencia() {
         return frenquencia;
     }
 
-    public void setFrenquencia(Double frenquencia) {
+    public void setFrenquencia(int frenquencia) {
         this.frenquencia = frenquencia;
     }
     

@@ -35,7 +35,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .secret("senhabandtec")
                 .authorizedGrantTypes("client_credentials")
                 .scopes("read", "write")
-                .accessTokenValiditySeconds(60)
+                .accessTokenValiditySeconds(3600)
                 .resourceIds("bandtec-teste-api");
     }
 

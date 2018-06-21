@@ -17,6 +17,7 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Boletim {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -29,13 +30,16 @@ public class Boletim {
     
     private Double media;
     
-    private Double frequencia;
+    private int frequencia;
     
     @ManyToOne
     private Aluno aluno;
     
     @ManyToOne
     private Disciplina disciplina;
+    
+    
+    
 
     public Aluno getAluno() {
         return aluno;
@@ -87,18 +91,22 @@ public class Boletim {
     }
 
     public Double getMedia() {
+        
+        media = (nota1 + nota2 + nota3) / 3;
+        
         return media;
+        
     }
 
     public void setMedia(Double media) {
         this.media = media;
     }
 
-    public Double getFrequencia() {
+    public int getFrequencia() {
         return frequencia;
     }
 
-    public void setFrequencia(Double frequencia) {
+    public void setFrequencia(int frequencia) {
         this.frequencia = frequencia;
     }
     

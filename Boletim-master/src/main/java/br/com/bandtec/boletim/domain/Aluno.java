@@ -19,12 +19,18 @@ import javax.persistence.ManyToOne;
 public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private int id;
     private String matricula;
     private String nome;
     
     @ManyToOne // Aluno pertence a uma unidade e uma unidade pode conter muitos alunos
     private Unidade unidade;
+
+    public Aluno(Integer id) {
+        this.id = id;
+    }
+
 
     public Unidade getUnidade() {
         return unidade;

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: br.com.bandtec.presenters.test.BoletimPresenterTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec <<< FAILURE! - in br.com.bandtec.presenters.test.BoletimPresenterTest
+testCalculaMedia(br.com.bandtec.presenters.test.BoletimPresenterTest)  Time elapsed: 0.079 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at br.com.bandtec.presenters.test.BoletimPresenterTest.testCalculaMedia(BoletimPresenterTest.java:99)
+

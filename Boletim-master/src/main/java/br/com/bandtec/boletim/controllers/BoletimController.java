@@ -5,8 +5,10 @@
  */
 package br.com.bandtec.boletim.controllers;
 
+import br.com.bandtec.boletim.domain.Aluno;
 import br.com.bandtec.boletim.repository.BoletimRepository;
 import br.com.bandtec.boletim.domain.Boletim;
+import br.com.bandtec.presenters.BoletimPresenter;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,14 +30,27 @@ public class BoletimController {
 
     @Autowired
     private BoletimRepository repository;
-    
-     static List<Boletim> boletins = new ArrayList<>();
 
+    //static List<Boletim> boletins = new ArrayList<>();
     @GetMapping
     public ResponseEntity getTodos() {
+
         Iterable<Boletim> boletins = this.repository.findAll();
 
         return ResponseEntity.ok(boletins);
+    }
+
+    @GetMapping("/aluno/{id}")
+    public ResponseEntity pesquisaPorAluno(@PathVariable("id") Integer id) {
+
+        Iterable<Boletim> boletins = this.repository.findByAluno(new Aluno(id));
+        List<BoletimPresenter> boletinsP = new ArrayList<>();
+
+        boletins.forEach(boletin -> {
+            boletinsP.add(new BoletimPresenter(boletin));
+        });
+
+        return ResponseEntity.ok(boletinsP);
     }
 
     @PostMapping
@@ -55,18 +70,17 @@ public class BoletimController {
         return ResponseEntity.ok().build();
     }
 
-       @PutMapping
-    public ResponseEntity atualizar(@RequestBody Boletim boletim)
-    {
-         this.repository.save(boletim);
-        
+    @PutMapping
+    public ResponseEntity atualizar(@RequestBody Boletim boletim) {
+        this.repository.save(boletim);
+
         return ResponseEntity.ok().build();
     }
 
-  @GetMapping("/{id}")
-    public ResponseEntity getUm(@PathVariable("id") Integer id)
-    {
-      Boletim boletim = this.repository.findOne(id);
-        return ResponseEntity.ok(boletim);
+    @GetMapping("/{id}")
+    public ResponseEntity getUm(@PathVariable("id") Integer id) {
+        Boletim boletim = this.repository.findOne(id);
+        
+        return ResponseEntity.ok(new BoletimPresenter(boletim));
     }
 }

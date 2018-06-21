@@ -2,52 +2,106 @@ package br.com.bandtec.presenters;
 
 import br.com.bandtec.boletim.controllers.BoletimController;
 import br.com.bandtec.boletim.domain.Boletim;
+import java.text.DecimalFormat;
 
 public class BoletimPresenter {
 
     private double nota1;
     private double nota2;
     private double nota3;
-    private double frequenciaMax;
-    private double frequencia;
-    private boolean aprovado;
+    private int frequencia;
+    //private int frequenciaUnidade;
+    private boolean resultado;
     private double calcMedia;
+    private String nomeDisciplina;
 
     public BoletimPresenter(Boletim boletim) {
-
+        
+        //DecimalFormat arredondar = new DecimalFormat();
+        //arredondar.setMinimumFractionDigits(3);
         frequencia = boletim.getFrequencia();
+        //frequenciaUnidade = boletim.getAluno().getUnidade().getFrenquencia();
         nota1 = boletim.getNota1();
         nota2 = boletim.getNota2();
         nota3 = boletim.getNota3();
-
-        if (boletim.getAluno().getUnidade().getFrenquencia() < boletim.getFrequencia()) {
-            aprovado = false;
+        calcMedia = boletim.getMedia();
+        //arredondar.format(calcMedia);
+        //nomeDisciplina = boletim.getDisciplina().getNome();
+        
+        //Valida se o aluno possui a media minima e numero de frequencia permitido
+        if (boletim.getAluno().getUnidade().getFrenquencia() >= boletim.getFrequencia() 
+           && boletim.getMedia() >= boletim.getAluno().getUnidade().getMedia()) {
+            resultado = true;
         } else {
-            aprovado = true;
+            resultado = false;
         }
 
-        if (boletim.getMedia() < boletim.getAluno().getUnidade().getMedia()) {
-            aprovado = false;
-        } else {
-            aprovado = true;
-        }
-
+    }
+/*
+    public int getFrequenciaUnidade() {
+        return frequenciaUnidade;
     }
 
-    public void calculaMedia(Boletim boletim) {
-        
-        calcMedia = (nota1 + nota2 + nota3) / 3;
-        
-        boletim.setMedia(calcMedia);
-        
+    public void setFrequenciaUnidade(int frequenciaUnidade) {
+        this.frequenciaUnidade = frequenciaUnidade;
     }
-    
-    public void validaFrequencia(Boletim boletim){
-        
-        frequenciaMax = 20;
-        
-        boletim.setFrequencia(frequenciaMax);
+*/
+
+    public boolean isResultado() {
+        return resultado;
     }
+
+    public void setResultado(boolean resultado) {
+        this.resultado = resultado;
+    }
+
+    public double getNota1() {
+        return nota1;
+    }
+
+    public void setNota1(double nota1) {
+        this.nota1 = nota1;
+    }
+
+    public double getNota2() {
+        return nota2;
+    }
+
+    public void setNota2(double nota2) {
+        this.nota2 = nota2;
+    }
+
+    public double getNota3() {
+        return nota3;
+    }
+
+    public void setNota3(double nota3) {
+        this.nota3 = nota3;
+    }
+
+    public int getFrequencia() {
+        return frequencia;
+    }
+
+    public void setFrequencia(int frequencia) {
+        this.frequencia = frequencia;
+    }
+
+    public double getCalcMedia() {
+        return calcMedia;
+    }
+
+    public void setCalcMedia(double calcMedia) {
+        this.calcMedia = calcMedia;
+    }
+
+    public String getNomeDisciplina() {
+        return nomeDisciplina;
+    }
+
+    public void setNomeDisciplina(String nomeDisciplina) {
+        this.nomeDisciplina = nomeDisciplina;
+    }  
 
 }
 

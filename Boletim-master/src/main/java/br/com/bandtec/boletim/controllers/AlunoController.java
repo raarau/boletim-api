@@ -32,7 +32,7 @@ public class AlunoController {
     @Autowired
     private AlunoRepository repository;
 
-     static List<Aluno> alunos = new ArrayList<>();
+     //static List<Aluno> alunos = new ArrayList<>();
    
     
     @GetMapping
@@ -74,4 +74,5 @@ public class AlunoController {
       Aluno aluno = this.repository.findOne(id);
         return ResponseEntity.ok(aluno);
     }
+    
 }

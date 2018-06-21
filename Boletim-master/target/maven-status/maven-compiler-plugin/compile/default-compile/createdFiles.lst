@@ -13,3 +13,4 @@ br/com/bandtec/boletim/repository/UnidadeRepository.class
 br/com/bandtec/boletim/domain/Boletim.class
 br/com/bandtec/boletim/domain/Disciplina.class
 br/com/bandtec/boletim/controllers/AlunoController.class
+br/com/bandtec/presenters/BoletimPresenter.class

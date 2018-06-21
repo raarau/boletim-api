@@ -16,6 +16,7 @@ import javax.persistence.Id;
  */
 @Entity
 public class Disciplina {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
